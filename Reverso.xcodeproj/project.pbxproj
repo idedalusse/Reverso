@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652D67631FBD582A00DC23DF /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D67591FBD582800DC23DF /* LaunchScreen.png */; };
+		652D67641FBD582A00DC23DF /* flecheDroite.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D675A1FBD582900DC23DF /* flecheDroite.png */; };
+		652D67651FBD582A00DC23DF /* felcheDroite.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D675B1FBD582900DC23DF /* felcheDroite.png */; };
+		652D67661FBD582A00DC23DF /* ADD.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D675C1FBD582900DC23DF /* ADD.png */; };
+		652D67671FBD582A00DC23DF /* appiconmaker.co_ios in Resources */ = {isa = PBXBuildFile; fileRef = 652D675D1FBD582900DC23DF /* appiconmaker.co_ios */; };
+		652D67681FBD582A00DC23DF /* Artboard 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D675E1FBD582900DC23DF /* Artboard 2.png */; };
+		652D67691FBD582A00DC23DF /* Artboard 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D675F1FBD582900DC23DF /* Artboard 1.png */; };
+		652D676A1FBD582A00DC23DF /* flecheGauche.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D67601FBD582900DC23DF /* flecheGauche.png */; };
+		652D676B1FBD582A00DC23DF /* Reverso Softissimo.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D67611FBD582A00DC23DF /* Reverso Softissimo.png */; };
+		652D676C1FBD582A00DC23DF /* unnamed.png in Resources */ = {isa = PBXBuildFile; fileRef = 652D67621FBD582A00DC23DF /* unnamed.png */; };
+		658CB1671FBCE1EB0058F582 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658CB1661FBCE1EB0058F582 /* UserDefaultsManager.swift */; };
 		65BFADC91FBAA29E00B6492C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFADC81FBAA29E00B6492C /* AppDelegate.swift */; };
 		65BFADCB1FBAA29E00B6492C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFADCA1FBAA29E00B6492C /* ViewController.swift */; };
 		65BFADCE1FBAA29E00B6492C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BFADCC1FBAA29E00B6492C /* Main.storyboard */; };
@@ -35,6 +46,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		652D67591FBD582800DC23DF /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
+		652D675A1FBD582900DC23DF /* flecheDroite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flecheDroite.png; sourceTree = "<group>"; };
+		652D675B1FBD582900DC23DF /* felcheDroite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = felcheDroite.png; sourceTree = "<group>"; };
+		652D675C1FBD582900DC23DF /* ADD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ADD.png; sourceTree = "<group>"; };
+		652D675D1FBD582900DC23DF /* appiconmaker.co_ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = appiconmaker.co_ios; sourceTree = "<group>"; };
+		652D675E1FBD582900DC23DF /* Artboard 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard 2.png"; sourceTree = "<group>"; };
+		652D675F1FBD582900DC23DF /* Artboard 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard 1.png"; sourceTree = "<group>"; };
+		652D67601FBD582900DC23DF /* flecheGauche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flecheGauche.png; sourceTree = "<group>"; };
+		652D67611FBD582A00DC23DF /* Reverso Softissimo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reverso Softissimo.png"; sourceTree = "<group>"; };
+		652D67621FBD582A00DC23DF /* unnamed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unnamed.png; sourceTree = "<group>"; };
+		658CB1661FBCE1EB0058F582 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		65BFADC51FBAA29E00B6492C /* Reverso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reverso.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BFADC81FBAA29E00B6492C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65BFADCA1FBAA29E00B6492C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +98,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		655D6FFD1FBD4A2700295E25 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				652D675C1FBD582900DC23DF /* ADD.png */,
+				652D675D1FBD582900DC23DF /* appiconmaker.co_ios */,
+				652D675F1FBD582900DC23DF /* Artboard 1.png */,
+				652D675E1FBD582900DC23DF /* Artboard 2.png */,
+				652D675B1FBD582900DC23DF /* felcheDroite.png */,
+				652D675A1FBD582900DC23DF /* flecheDroite.png */,
+				652D67601FBD582900DC23DF /* flecheGauche.png */,
+				652D67591FBD582800DC23DF /* LaunchScreen.png */,
+				652D67611FBD582A00DC23DF /* Reverso Softissimo.png */,
+				652D67621FBD582A00DC23DF /* unnamed.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		65BFADBC1FBAA29E00B6492C = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +138,12 @@
 		65BFADC71FBAA29E00B6492C /* Reverso */ = {
 			isa = PBXGroup;
 			children = (
+				655D6FFD1FBD4A2700295E25 /* images */,
 				65BFADC81FBAA29E00B6492C /* AppDelegate.swift */,
 				65BFADCA1FBAA29E00B6492C /* ViewController.swift */,
 				65BFADCC1FBAA29E00B6492C /* Main.storyboard */,
 				65BFADF61FBAA3F800B6492C /* deux.swift */,
+				658CB1661FBCE1EB0058F582 /* UserDefaultsManager.swift */,
 				65BFADCF1FBAA29E00B6492C /* Assets.xcassets */,
 				65BFADD11FBAA29E00B6492C /* LaunchScreen.storyboard */,
 				65BFADD41FBAA29E00B6492C /* Info.plist */,
@@ -236,8 +277,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				65BFADD31FBAA29E00B6492C /* LaunchScreen.storyboard in Resources */,
+				652D67661FBD582A00DC23DF /* ADD.png in Resources */,
+				652D67681FBD582A00DC23DF /* Artboard 2.png in Resources */,
+				652D676A1FBD582A00DC23DF /* flecheGauche.png in Resources */,
 				65BFADD01FBAA29E00B6492C /* Assets.xcassets in Resources */,
+				652D67631FBD582A00DC23DF /* LaunchScreen.png in Resources */,
+				652D67671FBD582A00DC23DF /* appiconmaker.co_ios in Resources */,
+				652D67641FBD582A00DC23DF /* flecheDroite.png in Resources */,
+				652D676C1FBD582A00DC23DF /* unnamed.png in Resources */,
+				652D67651FBD582A00DC23DF /* felcheDroite.png in Resources */,
 				65BFADCE1FBAA29E00B6492C /* Main.storyboard in Resources */,
+				652D67691FBD582A00DC23DF /* Artboard 1.png in Resources */,
+				652D676B1FBD582A00DC23DF /* Reverso Softissimo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +315,7 @@
 			files = (
 				65BFADF71FBAA3F800B6492C /* deux.swift in Sources */,
 				65BFADCB1FBAA29E00B6492C /* ViewController.swift in Sources */,
+				658CB1671FBCE1EB0058F582 /* UserDefaultsManager.swift in Sources */,
 				65BFADC91FBAA29E00B6492C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,8 +11,8 @@ class deux: UIViewController {
     @IBOutlet weak var en: UITextField!
     @IBOutlet weak var fr: UITextField!
     
-    var arrFrench:[String]!
     var arrEnglish:[String]!
+    var arrFrench:[String]!
     //********************
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,19 +20,20 @@ class deux: UIViewController {
     }
     //********************
     @IBAction func ADD(_ sender: UIButton) {
-        arrFrench.append(fr.text!)
+       
         arrEnglish.append(en.text!)
-        UserDefaults.standard.set(arrFrench, forKey: "french")
+        arrFrench.append(fr.text!)
         UserDefaults.standard.set(arrEnglish, forKey: "english")
+        UserDefaults.standard.set(arrFrench, forKey: "french")
     }
     //********************
     func managerUser() {
         if UserDefaults.standard.object(forKey: "french") != nil {
-            arrFrench = UserDefaults.standard.object(forKey: "French") as! [String]
-            arrEnglish = UserDefaults.standard.object(forKey: "English") as! [String]
+            arrEnglish = UserDefaults.standard.object(forKey: "english") as! [String]
+            arrFrench = UserDefaults.standard.object(forKey: "french") as! [String]
         } else {
-            arrFrench = [String] ()
             arrEnglish = [String] ()
+            arrFrench = [String] ()
         }
     }
 }
