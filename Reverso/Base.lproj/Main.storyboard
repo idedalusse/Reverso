@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,10 +50,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flecheDroite.png" translatesAutoresizingMaskIntoConstraints="NO" id="3sg-g3-055">
-                                <rect key="frame" x="321" y="33" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="voayage" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5E0-py-2M6">
                                 <rect key="frame" x="82" y="20" width="204" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -70,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-767.20000000000005" y="-620.23988005997012"/>
+            <point key="canvasLocation" x="-1265" y="-620"/>
         </scene>
         <!--Deux-->
         <scene sceneID="MVU-sV-U16">
@@ -80,53 +77,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="EVZ-a7-gw1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Artboard 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="EVZ-a7-gw1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EVZ-a7-gw1" secondAttribute="height" multiplier="375:667" id="FPY-wm-9Dk"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8m-FA-yKd">
-                                <rect key="frame" x="8" y="20" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="gKC-N9-tts"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flecheGauche.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zow-OO-IZY">
-                                <rect key="frame" x="13" y="31" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="English" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RV2-Mc-QC5">
-                                <rect key="frame" x="122" y="250" width="140" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="English" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RV2-Mc-QC5">
+                                <rect key="frame" x="117" y="250" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RV2-Mc-QC5" secondAttribute="height" multiplier="14:3" id="ZOo-jf-Sf0"/>
+                                </constraints>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="French" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWR-rc-MKp">
-                                <rect key="frame" x="124" y="308" width="140" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="French" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWR-rc-MKp">
+                                <rect key="frame" x="117" y="307" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZWR-rc-MKp" secondAttribute="height" multiplier="14:3" id="gwn-BD-0I6"/>
+                                </constraints>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cy9-K4-94u">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cy9-K4-94u">
                                 <rect key="frame" x="164" y="402" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Vlt-bt-3gH"/>
+                                    <constraint firstAttribute="height" constant="30" id="WU2-3d-4uC"/>
+                                </constraints>
                                 <state key="normal" title="ADD"/>
                                 <connections>
                                     <action selector="ADD:" destination="zw6-rV-Yd4" eventType="touchUpInside" id="vK9-0Z-tWC"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ADD.png" translatesAutoresizingMaskIntoConstraints="NO" id="X2c-KV-dY4">
-                                <rect key="frame" x="146" y="381" width="83" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unnamed.png" translatesAutoresizingMaskIntoConstraints="NO" id="HdC-3d-j08">
-                                <rect key="frame" x="130" y="91" width="114" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8m-FA-yKd">
+                                <rect key="frame" x="16" y="36" width="30" height="26"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="B8m-FA-yKd" secondAttribute="height" multiplier="15:13" id="Qeq-ow-pgg"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="gKC-N9-tts"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RV2-Mc-QC5" firstAttribute="leading" secondItem="FAJ-wr-wIg" secondAttribute="leading" constant="117" id="0lY-Ne-JIM"/>
+                            <constraint firstItem="ZWR-rc-MKp" firstAttribute="top" secondItem="RV2-Mc-QC5" secondAttribute="bottom" constant="27" id="6oz-3P-dah"/>
+                            <constraint firstItem="FAJ-wr-wIg" firstAttribute="bottom" secondItem="B8m-FA-yKd" secondAttribute="bottom" constant="605" id="Cnd-CY-rAA"/>
+                            <constraint firstItem="EVZ-a7-gw1" firstAttribute="top" secondItem="XPn-c2-CVK" secondAttribute="top" id="H9y-v7-ErR"/>
+                            <constraint firstItem="EVZ-a7-gw1" firstAttribute="leading" secondItem="FAJ-wr-wIg" secondAttribute="leading" id="Jb5-hD-CeW"/>
+                            <constraint firstItem="EVZ-a7-gw1" firstAttribute="bottom" secondItem="FAJ-wr-wIg" secondAttribute="bottom" id="Ouh-Jz-mx0"/>
+                            <constraint firstItem="FAJ-wr-wIg" firstAttribute="trailing" secondItem="RV2-Mc-QC5" secondAttribute="trailing" constant="118" id="R2n-KQ-LHO"/>
+                            <constraint firstItem="EVZ-a7-gw1" firstAttribute="trailing" secondItem="FAJ-wr-wIg" secondAttribute="trailing" id="TsE-6O-LZa"/>
+                            <constraint firstItem="B8m-FA-yKd" firstAttribute="leading" secondItem="FAJ-wr-wIg" secondAttribute="leading" constant="16" id="Uva-ge-m3o"/>
+                            <constraint firstItem="Cy9-K4-94u" firstAttribute="top" secondItem="ZWR-rc-MKp" secondAttribute="bottom" constant="65" id="Y2F-1R-q48"/>
+                            <constraint firstItem="ZWR-rc-MKp" firstAttribute="leading" secondItem="FAJ-wr-wIg" secondAttribute="leading" constant="117" id="aLL-MT-f1J"/>
+                            <constraint firstItem="FAJ-wr-wIg" firstAttribute="trailing" secondItem="B8m-FA-yKd" secondAttribute="trailing" constant="329" id="aeo-xT-54i"/>
+                            <constraint firstItem="Cy9-K4-94u" firstAttribute="centerX" secondItem="ZWR-rc-MKp" secondAttribute="centerX" id="cDJ-9y-2OK"/>
+                            <constraint firstItem="FAJ-wr-wIg" firstAttribute="trailing" secondItem="ZWR-rc-MKp" secondAttribute="trailing" constant="118" id="e1p-nY-iGM"/>
+                            <constraint firstItem="B8m-FA-yKd" firstAttribute="top" secondItem="FAJ-wr-wIg" secondAttribute="top" constant="16" id="jcx-Ay-0In"/>
+                            <constraint firstItem="RV2-Mc-QC5" firstAttribute="top" secondItem="FAJ-wr-wIg" secondAttribute="top" constant="230" id="qEA-5r-Tc3"/>
+                            <constraint firstItem="FAJ-wr-wIg" firstAttribute="bottom" secondItem="Cy9-K4-94u" secondAttribute="bottom" constant="235" id="r83-gh-84g"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FAJ-wr-wIg"/>
                     </view>
                     <connections>
@@ -140,11 +156,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ADD.png" width="205" height="205"/>
         <image name="Artboard 1.png" width="750" height="1334"/>
         <image name="Artboard 2.png" width="750" height="1334"/>
-        <image name="flecheDroite.png" width="82" height="67"/>
-        <image name="flecheGauche.png" width="78" height="64"/>
         <image name="unnamed.png" width="300" height="300"/>
     </resources>
 </document>

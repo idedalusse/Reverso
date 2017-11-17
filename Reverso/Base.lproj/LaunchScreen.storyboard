@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,26 +19,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="laM-a8-Vkq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="laM-a8-Vkq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unnamed.png" translatesAutoresizingMaskIntoConstraints="NO" id="sq7-Jo-4h5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unnamed.png" translatesAutoresizingMaskIntoConstraints="NO" id="sq7-Jo-4h5">
                                 <rect key="frame" x="105" y="76" width="165" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Reverso Softissimo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uij-ek-wAC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Reverso Softissimo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uij-ek-wAC">
                                 <rect key="frame" x="24" y="287" width="327" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Uij-ek-wAC" secondAttribute="height" multiplier="109:31" id="I8q-Wb-LGF"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sq7-Jo-4h5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="71s-MP-AYb"/>
+                            <constraint firstItem="Uij-ek-wAC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="C6n-Bq-h2f"/>
+                            <constraint firstItem="sq7-Jo-4h5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="FiE-Sx-5gD"/>
+                            <constraint firstItem="laM-a8-Vkq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="KXN-ug-Wlx"/>
+                            <constraint firstItem="laM-a8-Vkq" firstAttribute="centerX" secondItem="Uij-ek-wAC" secondAttribute="centerX" id="Th2-E5-nit"/>
+                            <constraint firstItem="laM-a8-Vkq" firstAttribute="centerY" secondItem="Uij-ek-wAC" secondAttribute="centerY" id="ZOb-Jp-j6G"/>
+                            <constraint firstItem="laM-a8-Vkq" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="cND-w3-R6Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sq7-Jo-4h5" secondAttribute="trailing" constant="105" id="dQh-ox-iMq"/>
+                            <constraint firstItem="Uij-ek-wAC" firstAttribute="top" secondItem="sq7-Jo-4h5" secondAttribute="bottom" constant="46" id="omd-8B-83h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uij-ek-wAC" secondAttribute="trailing" constant="24" id="qOK-Ib-UgP"/>
+                            <constraint firstItem="laM-a8-Vkq" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="vzQ-yy-7Fb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="-594" y="364"/>
         </scene>
     </scenes>
     <resources>

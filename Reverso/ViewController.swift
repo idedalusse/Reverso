@@ -32,6 +32,13 @@ import UIKit
         super.viewDidLoad()
         managerUser()
         dict = Dictionary(uniqueKeysWithValues: zip(arrFrench, arrEnglish))
+        
+        // pour vider la memoire
+       // UserDefaults.standard.removeObject(forKey: "french")
+      //  UserDefaults.standard.removeObject(forKey: "english")
+        
+       // dict = Dictionary(uniqueKeysWithValues: zip(arrFrench, arrEnglish))
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 //*******************

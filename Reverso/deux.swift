@@ -13,10 +13,12 @@ class deux: UIViewController {
     
     var arrEnglish:[String]!
     var arrFrench:[String]!
+    var showAlertButtonTapped = UIAlertController(title:"coucou",message:"coucou",preferredStyle:UIAlertControllerStyle.alert)
     //********************
     override func viewDidLoad() {
         super.viewDidLoad()
        managerUser()
+        showAlertButtonTapped = UIAlertController(title:"coucou",message:"coucou",preferredStyle:UIAlertControllerStyle.alert)
     }
     //********************
     @IBAction func ADD(_ sender: UIButton) {
@@ -36,4 +38,22 @@ class deux: UIViewController {
             arrFrench = [String] ()
         }
     }
+    //********************
+    
+    @IBAction func buttonClick(_ sender: UIButton) {
+        
+        showAlertButtonTapped = UIAlertController(title: "Success!", message:
+            "Words have been saved", preferredStyle: UIAlertControllerStyle.alert)
+        showAlertButtonTapped.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
+        self.present(showAlertButtonTapped, animated: true, completion: nil)
+    }
+
 }
+
+
+
+
+
+
+       
+
