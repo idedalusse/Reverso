@@ -17,16 +17,19 @@ import UIKit
     var arrEnglish:[String]!
     var dict : [String: String]!
     var keys : [String]!
-    var dictOfAnglais:[String: String]!
     //*******************
     @IBOutlet weak var result: UILabel!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        tableView.backgroundColor = UIColor.clear
         return arrFrench.count
     }
     //*******************
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier: nil)
-        cell.textLabel?.text = [String](dict.keys)[indexPath.row]
+        cell.backgroundColor = UIColor.clear
+        cell.textLabel?.textColor = UIColor.white
+        let sortedDict = dict.sorted(by: {$0.key < $1.key})
+        cell.textLabel?.text = sortedDict[indexPath.row].key
         return cell
     }
     //*******************
@@ -34,16 +37,31 @@ import UIKit
         result.text = [String](dict.values)[indexPath.row]
     }
     //*******************
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            
+            arrFrench.remove(at: indexPath.row)
+            arrEnglish.remove(at: indexPath.row)
+            
+            UserDefaults.standard.set(arrFrench as AnyObject, forKey: "french")
+            UserDefaults.standard.set(arrEnglish as AnyObject, forKey: "english")
+            
+            if français.alpha == 1.0 {
+                dict = Dictionary(uniqueKeysWithValues: zip(arrFrench, arrEnglish))
+            } else {
+                dict = Dictionary(uniqueKeysWithValues: zip(arrEnglish, arrFrench))
+            }
+            
+            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.automatic)
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         managerUser()
         dict = Dictionary(uniqueKeysWithValues: zip(arrFrench, arrEnglish))
         buttons = [français, anglais]
-        // pour vider la memoire
-       // UserDefaults.standard.removeObject(forKey: "french")
-      //  UserDefaults.standard.removeObject(forKey: "english")
-    // dict = Dictionary(uniqueKeysWithValues: zip(arrFrench, arrEnglish))
-// Do any additional setup after loading the view, typically from a nib.
     }
 //*******************
     @IBAction func actionForButtons(_ sender: UIButton) {
@@ -58,14 +76,16 @@ import UIKit
                 displayAnglaisOrFrançais(anglaisOrFrançais: sender.currentTitle!)
             }
         }
+        tabview.reloadData()
     }
     //*******************
  func displayAnglaisOrFrançais(anglaisOrFrançais: String) {
-        if anglaisOrFrançais == "NOMS" {
-            dictOfAnglais = Dictionary(uniqueKeysWithValues: zip(arrEnglish, arrFrench))
+        if anglaisOrFrançais == "Français" {
+            dict = Dictionary(uniqueKeysWithValues: zip(arrFrench, arrEnglish))
         } else {
-            dictOfAnglais = Dictionary(uniqueKeysWithValues: zip(arrFrench, arrEnglish))
+            dict = Dictionary(uniqueKeysWithValues: zip(arrEnglish, arrFrench))
         }
+  
         tabview.reloadData()
     }
     //*******************

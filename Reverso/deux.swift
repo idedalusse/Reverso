@@ -7,45 +7,35 @@
 import UIKit
 //********************
 class deux: UIViewController {
-    
+    //********************
     @IBOutlet weak var en: UITextField!
     @IBOutlet weak var fr: UITextField!
-    
+    //********************
     var arrEnglish:[String]!
     var arrFrench:[String]!
-    //var showAlertButtonTapped = UIAlertController(title:"coucou",message:"coucou",preferredStyle:UIAlertControllerStyle.alert)
     //********************
     override func viewDidLoad() {
         super.viewDidLoad()
        managerUser()
-      //  showAlertButtonTapped = UIAlertController(title:"coucou",message:"coucou",preferredStyle:UIAlertControllerStyle.alert)
     }
     //********************
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    // fonction pour alert pour savoir si le mot existe deja
     @IBAction func ShowAlert(_ sender: Any) {
-        
-        
         let alertController = UIAlertController(title: "Congratulations!", message: "successful registration", preferredStyle: .alert)
-        
         self.present(alertController, animated: true, completion:nil)
-        
-        
         let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
             print("You've pressed OK button");
         }
-        
         alertController.addAction(OKAction)
-        
-        
+        en.text = ""
+        fr.text = ""
     }
-    
     //********************
     @IBAction func ADD(_ sender: UIButton) {
-       
         arrEnglish.append(en.text!)
         arrFrench.append(fr.text!)
         UserDefaults.standard.set(arrEnglish, forKey: "english")
@@ -61,18 +51,8 @@ class deux: UIViewController {
             arrFrench = [String] ()
         }
     }
-    //********************
-    
-//@IBAction func buttonClick(_ sender: UIButton) {
-        
-       //showAlertButtonTapped = UIAlertController(title: "Success!", message:
-          //  "Words have been saved", preferredStyle: UIAlertControllerStyle.alert)
-        //showAlertButtonTapped.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
-        //self.present(showAlertButtonTapped, animated: true, completion: nil)
-   // }
-
 }
-
+ //********************
 
 
 
